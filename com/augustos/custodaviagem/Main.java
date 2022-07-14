@@ -18,7 +18,21 @@ public class Main {
 
         /** Program start **/
         System.out.println("Insira o titulo da viagem");
-        String str = in.next();
+        String titulo = in.nextLine();
+
+        System.out.println("Insira o nr de kilometros");
+        Double kilometros = in.nextDouble();
+
+        System.out.println("Insira o consumo do veículo em litros/100km");
+        Double consumo = in.nextDouble();
+
+        System.out.println("Insira o preço do combustível usado em euros por litro");
+        Float preco = in.nextFloat();
+
+        Double totalLitros = kilometros*consumo/100;
+        Double total = totalLitros*preco;
+        System.out.println("=======================================================");
+        System.out.println("Custo total da viagem: " + String.format("%.02f", total) + " euros.");
 
     }
 }
