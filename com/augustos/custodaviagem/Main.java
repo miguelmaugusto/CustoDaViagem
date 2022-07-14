@@ -29,10 +29,18 @@ public class Main {
         System.out.println("Insira o preço do combustível usado em euros por litro");
         Float preco = in.nextFloat();
 
+        System.out.println("Insira o preço total das portagens");
+        Float portagens = in.nextFloat();
+
         Double totalLitros = kilometros*consumo/100;
         Double total = totalLitros*preco;
+        total+=portagens;
+
         System.out.println("=======================================================");
         System.out.println("Custo total da viagem: " + String.format("%.02f", total) + " euros.");
+
+        in.nextLine();
+        in.close();
 
     }
 }
